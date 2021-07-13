@@ -1,0 +1,11 @@
+*.md
+.cache
+.github
+dist
+packages/**/dist
+node_moduels
+package-lock.json
+yarn.lock
+*.log
+tsconfig.json
+*.txt

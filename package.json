@@ -1,0 +1,40 @@
+{
+  "name": "tmdb",
+  "version": "0.0.0",
+  "private": true,
+  "description": "IMDB like website based on react and tmdb api",
+  "main": "index.js",
+  "workspaces": [
+    "packages/ui",
+    "packages/server"
+  ],
+  "scripts": {
+    "clean": "lerna clean",
+    "bootstrap": "yarn install",
+    "postinstall": "husky install",
+    "pre-commit-lint": "yarn lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandrikka/react-tmdb.git"
+  },
+  "keywords": [
+    "tmdb",
+    "react",
+    "hooks",
+    "aws lamda",
+    "aws sam"
+  ],
+  "author": "Anand Reddy Rikka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anandrikka/react-tmdb/issues"
+  },
+  "homepage": "https://github.com/anandrikka/react-tmdb#readme",
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2"
+  }
+}

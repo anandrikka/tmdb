@@ -1,0 +1,9 @@
+{
+  "npmClient": "yarn",
+  "packages": [
+    "packages/ui",
+    "packages/server"
+  ],
+  "useWorkspace": true,
+  "version": "independent"
+}
