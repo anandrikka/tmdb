@@ -12,7 +12,8 @@
     "clean": "lerna clean",
     "bootstrap": "yarn install",
     "postinstall": "husky install",
-    "pre-commit-lint": "yarn lint-staged"
+    "pre-commit-lint": "yarn lint-staged",
+    "start:all": "lerna run start"
   },
   "repository": {
     "type": "git",
@@ -28,9 +29,9 @@
   "author": "Anand Reddy Rikka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anandrikka/react-tmdb/issues"
+    "url": "https://github.com/anandrikka/tmdb/issues"
   },
-  "homepage": "https://github.com/anandrikka/react-tmdb#readme",
+  "homepage": "https://github.com/anandrikka/tmdb#readme",
   "devDependencies": {
     "eslint": "^7.30.0",
     "husky": "^7.0.1",
