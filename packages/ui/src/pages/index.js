@@ -9,9 +9,9 @@ function App() {
     <div>
       <Header></Header>
       <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/about" component={Landing} />
-        <Route path="*" component={NotFound} />
+        <Route exact path="/" render={Landing} />
+        <Route exact path="/about" render={Landing} />
+        <Route path="*" render={NotFound} />
       </Switch>
     </div>
   );

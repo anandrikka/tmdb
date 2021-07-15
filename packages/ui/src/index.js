@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './index.css';
+import useReducerWithContext from './hooks/useReducerWithMemo';
 import App from './pages';
-// import reportWebVitals from './reportWebVitals';
-
-const GlobalContext = React.createContext();
+import { GlobalContext } from './store/define-context';
+import globalReducer, {
+  initialState as globalState,
+} from './store/reducers/root-reducer';
+import './index.css';
 
 function Root() {
+  const contextValue = useReducerWithContext(globalReducer, globalState);
   return (
     <React.StrictMode>
-      <GlobalContext.Provider>
+      <GlobalContext.Provider value={contextValue}>
         <Router>
           <App />
         </Router>
