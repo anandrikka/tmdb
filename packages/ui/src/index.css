@@ -1,2 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans&display=swap');
 @import '~bootstrap/dist/css/bootstrap-reboot.min.css';
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
+
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+.theme-light {
+  --primary: #303f9f;
+  --primary-contrast-color: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0, 0.54);
+  --background: #fafafa;
+  --elevation-background: #fff;
+  --splash-bg: #303f9f;
+}
+
+.theme-dark {
+  --primary: #7986cb;
+  --primary-contrast-color: #ffffff;
+  --text-primary: rgba(255, 255, 255, 1);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --background: #121212; /* #303030 */
+  --elevation-background: #424242;
+  --splash-bg: #121212;
+}
+
+body {
+  font-family: 'Maven Pro', 'Open Sans', 'Helvetica', 'sans-serif';
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

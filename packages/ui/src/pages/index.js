@@ -1,18 +1,14 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import Body from '../components/body';
 import Header from '../components/header';
-import Landing from './landing';
-import NotFound from './404';
+import GlobalRouter from '../routes/global-router';
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header></Header>
-      <Switch>
-        <Route exact path="/" render={Landing} />
-        <Route exact path="/about" render={Landing} />
-        <Route path="*" render={NotFound} />
-      </Switch>
+      <Body>
+        <GlobalRouter />
+      </Body>
     </div>
   );
 }
