@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function MoviePage(props) {
+function MoviesPage(props) {
   let [counter, setCounter] = useState(0);
 
   const counterIncrease = () => {
@@ -22,4 +22,4 @@ function MoviePage(props) {
   );
 }
 
-export default MoviePage;
+export default MoviesPage;

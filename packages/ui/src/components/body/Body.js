@@ -1,7 +1,9 @@
-import styles from './body.module.css';
-
 function Body({ children }) {
-  return <div className={`${styles.appContainer} container`}>{children}</div>;
+  return (
+    <div id="body" className="app-container container pt-4">
+      {children}
+    </div>
+  );
 }
 
 export default Body;

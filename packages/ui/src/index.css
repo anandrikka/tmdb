@@ -1,36 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Open+Sans&display=swap');
-@import '~bootstrap/dist/css/bootstrap-reboot.min.css';
-@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import '~bootstrap/dist/css/bootstrap.css';
 
 :root {
   --black: #000;
   --white: #fff;
 }
 
+/*
+  sm >= 576px
+  md >= 768px
+  lg >= 992px
+  xl >= 1200px
+  xxl >= 1400px
+*/
 .theme-light {
-  --primary: #303f9f;
-  --primary-contrast-color: #ffffff;
-  --text-primary: rgba(0, 0, 0, 0.87);
-  --text-secondary: rgba(0, 0, 0, 0, 0.54);
-  --background: #fafafa;
-  --elevation-background: #fff;
-  --splash-bg: #303f9f;
+  --primary: rgb(3, 37, 65);
+  --primary-light: rgb(1, 180, 228);
+  --secondary: rgb(30, 213, 169);
+  --secondary-lighter: rgb(192, 254, 207);
+  --primary-text-color: #fff;
+  --primary-light-text-color: #fff;
+  --secondary-text-color: #fff;
+  --secondary-lighter-text-color: #000;
+  --text-color: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --background: #fff;
 }
 
 .theme-dark {
-  --primary: #7986cb;
-  --primary-contrast-color: #ffffff;
-  --text-primary: rgba(255, 255, 255, 1);
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --background: #121212; /* #303030 */
-  --elevation-background: #424242;
-  --splash-bg: #121212;
+  --primary: rgb(3, 37, 65);
+  --primary-light: rgb(1, 180, 228);
+  --secondary: rgb(30, 213, 169);
+  --secondary-lighter: rgb(192, 254, 207);
+  --primary-text-color: #fff;
+  --primary-light-text-color: #fff;
+  --secondary-text-color: #fff;
+  --secondary-lighter-text-color: #000;
+  --text-color: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --background: #fff;
 }
 
 body {
   font-family: 'Maven Pro', 'Open Sans', 'Helvetica', 'sans-serif';
   background: var(--background);
-  color: var(--text-primary);
+  color: var(--text-color);
 }
 
 #root {
@@ -39,4 +53,68 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.app-container {
+  margin-top: 64px;
+}
+
+/* Header styles */
+
+.header {
+  height: 64px;
+  line-height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--primary-text-color);
+}
+
+.header .brand img {
+  width: 160px;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.header nav ul li {
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.header nav.menu li > a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.header nav.menu ul li:hover {
+  /* background-color: var(--primary-light);
+  color: var(--primary-light-text-color); */
+  cursor: pointer;
+}
+
+.header nav i.fa {
+  color: var(--primary-light);
+}
+
+/* Header styles */
+
+@media screen and (max-width: 767.99px) {
+  .header {
+    height: 56px;
+    line-height: 56px;
+  }
+  .app-container {
+    margin-top: 56px;
+  }
 }
